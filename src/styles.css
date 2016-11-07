@@ -1,0 +1,30 @@
+.table-container{
+  overflow-y: auto;
+  max-height: 90vh;
+}
+.wrapper{
+  padding-right: 30px;
+  padding-left: 15px;
+}
+.highlight{
+  background: #cfcfcf;
+}
+.align-center{
+  text-align: center ;
+}
+.align-right{
+  text-align: right ;
+}
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-menu {
+}
+.dropdown-center {
+  text-align: center;
+  transform: translate(-50%, 0);
+  left: 50%;
+}
+.hidden-clickborder {
+  outline: none;
+}

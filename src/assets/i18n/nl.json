@@ -1,0 +1,36 @@
+{
+  "LEGEND":{
+    "ONE": "zeer laag (klinisch significante kanker is hoogst onwaarschijnlijk",
+    "TWO": "laag (klinisch significante kanker is onwaarschijnlijk",
+    "THREE": "gemiddeld (de aanwezigheid van klinisch significante kanker is twijfelachtig",
+    "FOUR": "hoog (zoge waarschijnlijkheid op klinisch significante kanker",
+    "FIVE": "zeer hoog (zeer hoge waarschijnlijkheid op klinisch significante kanker",
+    "X": "technisch inadequaat of niet getest"
+  },
+  "TABLE":{
+    "REGION": "Regio",
+    "LEVEL": "Niveau",
+    "SIDE": "Kant",
+    "VOLUME": "Volume",
+    "COMMENT": "Opmerkingen",
+    "T2": "T2",
+    "DWI": "DWI",
+    "DCE": "DCE",
+    "PIRADS": "PIRADS",
+    "DIALOG": "U staat op het punt om meer dan 4 bevindingen toe te voeg, wilt u doorgaan?",
+    "SORT": "Sorteren op"
+  },
+  "DATA":{
+    "LEVEL": {
+      "BASE": "basis",
+      "MID": "midden",
+      "APEX": "top",
+      " ": " "
+    },
+    "SIDE":{
+      "R": "R",
+      "L": "L",
+      " ": " "
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<div *ngIf="!show" class="glyphicon glyphicon-info-sign" (click)="show = !show">
+</div>
+<div *ngIf="show" class="well">
+  <div class="glyphicon glyphicon-remove" (click)="show = !show"></div>
+  <div *ngFor="let element of categories; let i = index">
+    <b>{{i + 1}}</b> {{'LEGEND.' + element | translate}}
+  </div>
+</div>
+
+
+
+

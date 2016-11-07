@@ -1,0 +1,96 @@
+<div class="table-container wrapper">
+  <div class="row" *ngIf="data != ''">
+    <div class="col-sm-6">
+      <a href="#" class="dropdown" dropdown>
+        <div class="dropdown-toggle" dropdownToggle>{{sort.column}}
+          <span *ngIf="zones.includes(sort.column) && sort.descending" class="glyphicon glyphicon-triangle-bottom"></span>
+          <span *ngIf="zones.includes(sort.column) && !sort.descending" class="glyphicon glyphicon-triangle-top"></span>
+        </div>
+        <ul class="dropdown-menu">
+          <li *ngFor="let column of zones">
+            <a href="#" (click)="clickSort(column)">
+              {{'TABLE.' + column.toLocaleUpperCase() | translate}}
+              <div *ngIf="column == sort.column && sort.descending" class="glyphicon glyphicon-triangle-bottom"></div>
+              <div *ngIf="column == sort.column && !sort.descending" class="glyphicon glyphicon-triangle-top"></div>
+            </a>
+          </li>
+
+        </ul>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let entry of data | orderBy: convertSorting() ; let ientry = index " id="{{entry.region}}{{entry.level}}{{entry.side}}">
+      <div class="row col-sm-offset-0 panel panel-info" (contextmenu)="tableRightClickHandler(entry.region, entry.level, entry.side)" (click)="tableClickHandler(entry.region, entry.level, entry.side)">
+        <div class="panel-heading panel-title" >
+          <div class="col-sm-1" align="center">
+            <b>{{entry.region}}</b>
+          </div>
+          <div *ngFor="let column of zones.slice(1,3); let i = index"   class="col-sm-1 align-center">
+            <b>{{'DATA.' + column.toLocaleUpperCase() + '.' +  entry[column].toLocaleUpperCase() | translate}}</b>
+          </div>
+          <div *ngFor="let column of columns" class="col-sm-1 align-center" >
+            {{'TABLE.' + column.toLocaleUpperCase() | translate}}
+          </div>
+          <div class="col-sm-2">
+            {{'TABLE.VOLUME' | translate}}
+          </div>
+          <div class="col-sm-1">
+            {{'TABLE.COMMENT' | translate}}
+          </div>
+          <div class="align-right" >
+            <span class="glyphicon glyphicon-remove" (click)="removeRow(ientry)"></span>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div *ngFor="let finding of entry.findings; let ifinding = index" class="panel-body">
+            <div class="row col-sm-offset-0">
+              <div class="col-sm-3" align="center">
+                {{ifinding+1}}
+              </div>
+              <div *ngFor="let method of columns.slice(0,3)" class="col-md-1 align-center">
+                <div *ngIf="checkIfSelectedEntry(entry.region, entry.level, entry.side)">
+                  <a href="#" class="dropdown badge" [ngStyle]="badgeStyle(finding[method], method, ifinding)" dropdown>
+                    <div class="dropdown-toggle" dropdownToggle>{{finding[method]}}
+                    </div>
+                    <ul class="dropdown-menu dropdown-center list-inline">
+                      <li *ngFor="let score of scorearray[method]">
+                        <a href="#" (click)="setScore(method, score, ifinding)">
+                          {{score}}
+                        </a>
+                      </li>
+                    </ul>
+                  </a>
+                </div>
+                <div *ngIf="!checkIfSelectedEntry(entry.region, entry.level, entry.side)">
+                  <div class="badge" [ngStyle]="badgeStyle(finding[method])">
+                    {{finding[method]}}
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-1 align-center">
+                <div class="badge" [ngStyle]="badgeStyle(finding['PIRADS'])">
+                  {{finding['PIRADS']}}
+                </div>
+              </div>
+
+              <div class="col-sm-2" align="left">
+                <label>
+                  <input height="100%" align="left" class="form-control" type="number" step="0.1" min="0"
+                         #volume (keyup)="setVolume(volume.value,ientry,ifinding)"/>
+                </label>
+              </div>
+              <div class="col-sm-3" align="left">
+                        <textarea autosize class="form-control"
+                                  #comment (keyup)="setComment(comment.value,ientry,ifinding)"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

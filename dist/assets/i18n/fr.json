@@ -1,0 +1,34 @@
+{
+  "LEGEND":{
+    "ONE": "petite baguette",
+    "TWO": "escargot",
+    "THREE": "raclette",
+    "FOUR": "du vin",
+    "FIVE": "la seine",
+    "X": "la tour Eiffel"
+  },
+  "TABLE":{
+    "REGION": "Région",
+    "LEVEL": "Niveau",
+    "SIDE": "Côté",
+    "VOLUME": "Volume",
+    "COMMENT": "Commentaire",
+    "T2": "T2",
+    "DWI": "DWI",
+    "DCE": "DCE",
+    "PIRADS": "PIRADS",
+    "DIALOG": "Bob et Bobette au supermarché"
+  },
+  "DATA":{
+    "LEVEL": {
+      "BASE": "base",
+      "MID": "milieu",
+      "APEX": "sommet"
+    },
+    "SIDE":{
+      "R": "D",
+      "L": "G"
+    }
+  }
+}
+
