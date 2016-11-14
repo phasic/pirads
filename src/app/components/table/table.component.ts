@@ -19,12 +19,13 @@ export class TableComponent{
     descending: false
   };
   private data: any;
+  private sorttitle: any;
   constructor(private dataservice:DataService, private pagectrl: PageController, private translate: TranslateService){
     this.data = dataservice.getData();
     setTimeout(() => {
-      let sorttitle: any = translate.get("TABLE.SORT");
+      this.sorttitle = translate.get("TABLE.SORT BY");
       this.sort = {
-        column: sorttitle.value,
+        column: this.sorttitle.value,
         descending: false
       }
     });
@@ -71,7 +72,9 @@ export class TableComponent{
     this.dataservice.getData().splice(index, 1);
   }
   clickSort(columnName: string): void{
+
     this.sort = (this.sort.column == columnName)? { column: columnName, descending: !this.sort.descending}: {column: columnName,descending: false};
+    this.sorttitle = this.translate.get("TABLE." + columnName.toLocaleUpperCase());
   }
 
   convertSorting(): string{

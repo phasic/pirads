@@ -1,34 +1,36 @@
 {
   "LEGEND":{
-    "ONE": "petite baguette",
-    "TWO": "escargot",
-    "THREE": "raclette",
-    "FOUR": "du vin",
-    "FIVE": "la seine",
-    "X": "la tour Eiffel"
+    "ONE": "very low (clinically significant cancer is highly unlikely to be present)",
+    "TWO": "low (clinically significant cancer is unlikely to be present)",
+    "THREE": "intermediate (the presence of clinically significant cancer is equivocal)",
+    "FOUR": "high (clinically significant cancer is likely to be present)",
+    "FIVE": "very high (clinically significant cancer is highly likely to be present)",
+    "X": "technically inadequate or was not performed"
   },
   "TABLE":{
-    "REGION": "Région",
-    "LEVEL": "Niveau",
-    "SIDE": "Côté",
+    "REGION": "Region",
+    "LEVEL": "Level",
+    "SIDE": "Side",
     "VOLUME": "Volume",
-    "COMMENT": "Commentaire",
+    "COMMENT": "Comment",
     "T2": "T2",
     "DWI": "DWI",
     "DCE": "DCE",
     "PIRADS": "PIRADS",
-    "DIALOG": "Bob et Bobette au supermarché"
+    "DIALOG": "You are about to add more than 4 findings, want to continue?",
+    "SORT BY": "Sort by"
   },
   "DATA":{
     "LEVEL": {
       "BASE": "base",
-      "MID": "milieu",
-      "APEX": "sommet"
+      "MID": "mid",
+      "APEX": "apex",
+      " " : " "
     },
     "SIDE":{
-      "R": "D",
-      "L": "G"
+      "R": "R",
+      "L": "L",
+      " ": " "
     }
   }
 }
-

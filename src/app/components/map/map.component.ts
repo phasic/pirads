@@ -17,7 +17,7 @@ export class MapComponent{
     this.pagectrl.hotKeys(event.keyCode);
   }
   leftClickHandler(event: any): void{
-    [this.region, this.side, this.level] = event.srcElement.getAttribute("title").split("_");
+    [this.region, this.side, this.level] = event.target.getAttribute("title").split("_");
     this.pagectrl.selectedentry = {
       region: this.region,
       level: this.level,
@@ -25,8 +25,8 @@ export class MapComponent{
     };
     this.addtoTable();
   }
-  rightClickHandler(): void{
-    [this.region, this.side, this.level] = event.srcElement.getAttribute("title").split("_");
+  rightClickHandler(event: any): void{
+    [this.region, this.side, this.level] = event.target.getAttribute("title").split("_");
     this.pagectrl.selectedentry = {
       region: this.region,
       level: this.level,

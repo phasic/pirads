@@ -3,15 +3,16 @@ import {Http, Response} from '@angular/http'
 
 @Injectable()
 export class HotkeyService {
-  get hotkeys(): {method: {one: number; two: number; three: number}; finding: {one: number; two: number; three: number; four: number; five: number; six: number; seven: number; eight: number; nine: number}} {
+  get hotkeys(): {method: {one: number; two: number; three: number}; finding: {one: number; two: number; three: number; four: number; five: number; six: number; seven: number; eight: number; nine: number}; scoring: {plus: number; minus: number}} {
     return this._hotkeys;
   }
+
   /**
    *
    * @param http used to read the json file
    */
   constructor(private http: Http) {
-    http.get('/assets/hotkeys.json')                //send a get request to the hotkeys.json file
+    http.get('assets/hotkeys.json')                //send a get request to the hotkeys.json file
       .map((res: Response) => res.json())         //get the response, parse it to jason
       .subscribe(res => {                         //makes an observable on res
         this._hotkeys = {                       //bind the hotkeys array

@@ -36,7 +36,7 @@ import {HotkeyService} from "./services/hotkey.service";
     Ng2BootstrapModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,
-      useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
+      useFactory: (http: Http) => new TranslateStaticLoader(http, 'assets/i18n', '.json'),
       deps: [Http]
     })
   ],

@@ -2,7 +2,7 @@
   <div class="row" *ngIf="data != ''">
     <div class="col-sm-6">
       <a href="#" class="dropdown" dropdown>
-        <div class="dropdown-toggle" dropdownToggle>{{sort.column}}
+        <div class="dropdown-toggle" dropdownToggle>{{sorttitle.value}}
           <span *ngIf="zones.includes(sort.column) && sort.descending" class="glyphicon glyphicon-triangle-bottom"></span>
           <span *ngIf="zones.includes(sort.column) && !sort.descending" class="glyphicon glyphicon-triangle-top"></span>
         </div>
