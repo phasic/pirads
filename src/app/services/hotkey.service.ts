@@ -80,7 +80,7 @@ export class HotkeyService {
   }
 
   /**
-   * hotkeys array structure
+   * Hotkeys array structure.
    */
   private _hotkeys: {
     method: {

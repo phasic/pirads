@@ -28,7 +28,7 @@ var page_controller_1 = require("../../services/page.controller");
  */
 var MapComponent = (function () {
     /**
-     * The contructor will initialize the following
+     * The constructor will initialize the following
      * @param dataservice This service contains all the data. This is used to set and get the correct data we want.
      * @param pagectrl  This service contains all the shared functionality. This service mainly handles the hotkeys and adjusting scores/methods/finding (used for navigation through the table)
      * @param translate This variable contains the TranslateService, and will be used to translate the placeholder values to the right language.
