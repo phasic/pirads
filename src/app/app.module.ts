@@ -19,6 +19,9 @@ import { DataService}           from './services/data.service';
 import {PageController} from "./services/page.controller";
 import {HotkeyService} from "./services/hotkey.service";
 
+/**
+ * Module that declares all the used components and modules. Imported or self-made
+ */
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +46,18 @@ import {HotkeyService} from "./services/hotkey.service";
   providers: [DataService, PageController, HotkeyService],
   bootstrap: [AppComponent]
 })
+/**
+ * AppModule will use AppComponent at bootstrap. And will set up the TranslateService
+ */
 export class AppModule {
+  /**
+   * Defines the different languages for the TranslateService.
+   *
+   * Sets a default language when a language isn't found (english)
+   *
+   * The language we are going to use, will the same as the browser language
+   * @param translate
+   */
   constructor(translate: TranslateService){
     translate.addLangs(["en", "fr", "nl"]);
     translate.setDefaultLang('en');

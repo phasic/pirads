@@ -27,7 +27,18 @@ var orderby_1 = require('./components/table/orderby');
 var data_service_1 = require('./services/data.service');
 var page_controller_1 = require("./services/page.controller");
 var hotkey_service_1 = require("./services/hotkey.service");
+/**
+ * Module that declares all the used components and modules. Imported or self-made
+ */
 var AppModule = (function () {
+    /**
+     * Defines the different languages for the TranslateService.
+     *
+     * Sets a default language when a language isn't found (english)
+     *
+     * The language we are going to use, will the same as the browser language
+     * @param translate
+     */
     function AppModule(translate) {
         translate.addLangs(["en", "fr", "nl"]);
         translate.setDefaultLang('en');

@@ -10,9 +10,44 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var http_1 = require('@angular/http');
+/**
+ * The HotkeyService reads the hotkeys.json file, and parses it into an array that can be used in the code to assign keybindings to functionality.
+ *
+ * When you want to change hotkeys, change the file and reload the page.
+ *
+ * Structure of the hotkeys array:
+ *
+ *       private _hotkeys: {
+ *                  method: {
+ *                    one: number,
+ *                    two: number,
+ *                    three: number
+ *                  },
+ *                  finding: {
+ *                    one: number,
+ *                    two: number,
+ *                    three: number,
+ *                    four: number,
+ *                    five: number,
+ *                    six: number,
+ *                    seven: number,
+ *                    eight: number,
+ *                    nine: number
+ *                  },
+ *                  scoring: {
+ *                    plus: number,
+ *                    minus: number
+ *                  }
+ *     };
+ *
+ * The hotkeys array will contains the keycodes of the hotkeys.
+ *
+ * Rebinding + and - won't work at the moment, the keycodes are calculated differently. Possible solution: store the characters in the array, and handle the keycodes in the rest of the code.
+ */
 var HotkeyService = (function () {
     /**
-     *
+     * http service gets the hotkeys.json file and maps it to a response. That response will get assigned to the hotkeys array.
+     * The hotkeys array contains the keycodes of the hotkeys.
      * @param http used to read the json file
      */
     function HotkeyService(http) {
@@ -46,6 +81,10 @@ var HotkeyService = (function () {
         });
     }
     Object.defineProperty(HotkeyService.prototype, "hotkeys", {
+        /**
+         * Getter that returns the hotkey array.
+         * @returns {{method: {one: number, two: number, three: number}, finding: {one: number, two: number, three: number, four: number, five: number, six: number, seven: number, eight: number, nine: number}, scoring: {plus: number, minus: number}}}
+         */
         get: function () {
             return this._hotkeys;
         },

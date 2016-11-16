@@ -9,6 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+/**
+ * This is the main component. Once you open the page, this will be shown.
+ *
+ * By default the component has a HTML content of 'loading...', once all the elements are loaded, the component shows his content.
+ *
+ *      selector: 'my-app'
+ *      templateUrl: './app.component.html'
+ *      styleUrls: ['app.component.css']
+ */
 var AppComponent = (function () {
     function AppComponent() {
     }

@@ -1,0 +1,634 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>MapComponent | pirads</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">pirads</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/_components_map_map_component_.html">&quot;components/map/map.component&quot;</a>
+				</li>
+				<li>
+					<a href="_components_map_map_component_.mapcomponent.html">MapComponent</a>
+				</li>
+			</ul>
+			<h1>Class MapComponent</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>This component contains the clickable PIRADS sector map, and all the related functionality.</p>
+					</div>
+					<p>When you left click on a sector, we first check if there&#39;s already an entry in the table with that name. If not, then add it to the table.
+					If there is an entry, highlight that entry in the table.</p>
+					<p>If you right click on a sector, we first check if there&#39;s already an entry with that name, if there is: highlight that entry, and add an extra finding to the table.
+					If we don&#39;t find an entry with that name, add a new entry to the table with that name.</p>
+					<pre><code> <span class="hljs-attribute">selector</span>: 'map-component'
+
+<span class="golo"> templateUrl: '../../templates/<span class="hljs-keyword">map</span>/<span class="hljs-keyword">map</span>.template.html'</span>
+</code></pre>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">MapComponent</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_components_map_map_component_.mapcomponent.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_components_map_map_component_.mapcomponent.html#dataservice" class="tsd-kind-icon">dataservice</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_components_map_map_component_.mapcomponent.html#level" class="tsd-kind-icon">level</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_components_map_map_component_.mapcomponent.html#pagectrl" class="tsd-kind-icon">pagectrl</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_components_map_map_component_.mapcomponent.html#region" class="tsd-kind-icon">region</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_components_map_map_component_.mapcomponent.html#side" class="tsd-kind-icon">side</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_components_map_map_component_.mapcomponent.html#translate" class="tsd-kind-icon">translate</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_components_map_map_component_.mapcomponent.html#addfinding" class="tsd-kind-icon">add<wbr>Finding</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_components_map_map_component_.mapcomponent.html#addtotable" class="tsd-kind-icon">addto<wbr>Table</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_components_map_map_component_.mapcomponent.html#keypresshandler" class="tsd-kind-icon">key<wbr>Press<wbr>Handler</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_components_map_map_component_.mapcomponent.html#leftclickhandler" class="tsd-kind-icon">left<wbr>Click<wbr>Handler</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_components_map_map_component_.mapcomponent.html#rightclickhandler" class="tsd-kind-icon">right<wbr>Click<wbr>Handler</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_components_map_map_component_.mapcomponent.html#scrollhandler" class="tsd-kind-icon">scroll<wbr>Handler</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Map<wbr>Component<span class="tsd-signature-symbol">(</span>dataservice<span class="tsd-signature-symbol">: </span><a href="_services_data_service_.dataservice.html" class="tsd-signature-type">DataService</a>, pagectrl<span class="tsd-signature-symbol">: </span><a href="_services_page_controller_.pagecontroller.html" class="tsd-signature-type">PageController</a>, translate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TranslateService</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_components_map_map_component_.mapcomponent.html" class="tsd-signature-type">MapComponent</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phasic/pirads/blob/66c671a/src/app/components/map/map.component.ts#L23">components/map/map.component.ts:23</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The contructor will initialize the following</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dataservice: <a href="_services_data_service_.dataservice.html" class="tsd-signature-type">DataService</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>This service contains all the data. This is used to set and get the correct data we want.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>pagectrl: <a href="_services_page_controller_.pagecontroller.html" class="tsd-signature-type">PageController</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>This service contains all the shared functionality. This service mainly handles the hotkeys and adjusting scores/methods/finding (used for navigation through the table)</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>translate: <span class="tsd-signature-type">TranslateService</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>This variable contains the TranslateService, and will be used to translate the placeholder values to the right language.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_components_map_map_component_.mapcomponent.html" class="tsd-signature-type">MapComponent</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="dataservice" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> dataservice</h3>
+					<div class="tsd-signature tsd-kind-icon">dataservice<span class="tsd-signature-symbol">:</span> <a href="_services_data_service_.dataservice.html" class="tsd-signature-type">DataService</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/phasic/pirads/blob/66c671a/src/app/components/map/map.component.ts#L30">components/map/map.component.ts:30</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This service contains all the data. This is used to set and get the correct data we want.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="level" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> level</h3>
+					<div class="tsd-signature tsd-kind-icon">level<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/phasic/pirads/blob/66c671a/src/app/components/map/map.component.ts#L44">components/map/map.component.ts:44</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This string contains the level. Base, mid or apex.</p>
+						</div>
+						<p>We get this value of the title of the clicked sector.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="pagectrl" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> pagectrl</h3>
+					<div class="tsd-signature tsd-kind-icon">pagectrl<span class="tsd-signature-symbol">:</span> <a href="_services_page_controller_.pagecontroller.html" class="tsd-signature-type">PageController</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/phasic/pirads/blob/66c671a/src/app/components/map/map.component.ts#L30">components/map/map.component.ts:30</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This service contains all the shared functionality. This service mainly handles the hotkeys and adjusting scores/methods/finding (used for navigation through the table)</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="region" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> region</h3>
+					<div class="tsd-signature tsd-kind-icon">region<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/phasic/pirads/blob/66c671a/src/app/components/map/map.component.ts#L38">components/map/map.component.ts:38</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This string contains the region name, as shown on the sector map.</p>
+						</div>
+						<p>We get this value of the title of the clicked sector.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="side" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> side</h3>
+					<div class="tsd-signature tsd-kind-icon">side<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/phasic/pirads/blob/66c671a/src/app/components/map/map.component.ts#L50">components/map/map.component.ts:50</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This string contains the side. Left or right.</p>
+						</div>
+						<p>We get this value of the title of the clicked sector.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="translate" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> translate</h3>
+					<div class="tsd-signature tsd-kind-icon">translate<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">TranslateService</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/phasic/pirads/blob/66c671a/src/app/components/map/map.component.ts#L30">components/map/map.component.ts:30</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This variable contains the TranslateService, and will be used to translate the placeholder values to the right language.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addfinding" class="tsd-anchor"></a>
+					<h3>add<wbr>Finding</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Finding<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phasic/pirads/blob/66c671a/src/app/components/map/map.component.ts#L172">components/map/map.component.ts:172</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>After we right clicked on a sector, we will attempt to add a finding to the table.</p>
+								</div>
+								<p>First we will see if the entry with the region, level and side already exists.
+									If it does, see how many entries we already got for that sector. If it&#39;s more that 9, don&#39;t do anything.
+								If it&#39;s more than 4, but less than 9, ask for confirmation. When it&#39;s less than 4, add an extra finding to the table.</p>
+								<p>If we don&#39;t find an entry of that sector, add the sector to the table by calling addtoTable().</p>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addtotable" class="tsd-anchor"></a>
+					<h3>addto<wbr>Table</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">addto<wbr>Table<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phasic/pirads/blob/66c671a/src/app/components/map/map.component.ts#L133">components/map/map.component.ts:133</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>When we attempt to add a new entry to the table we call addtoTable.</p>
+								</div>
+								<p>This function will check if the region, level and side already exist in the table.
+									If they don&#39;t, add it to the data in the dataservice (this will add it to the table dynamically)
+									The findings of the entry are all default on &#39;x&#39;
+								The selected method in the pagecontroller will be set on &#39;T2&#39;</p>
+								<p>If we found an entry, we just set the findings index on 0 and highlight that entry in the table.</p>
+								<p>A sector can have multiple findings, that&#39;s why we set the findings index on 0, so we are at the top of that entry.</p>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="keypresshandler" class="tsd-anchor"></a>
+					<h3>key<wbr>Press<wbr>Handler</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">key<wbr>Press<wbr>Handler<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phasic/pirads/blob/66c671a/src/app/components/map/map.component.ts#L57">components/map/map.component.ts:57</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>keyPressHandler hangs on the window of the application, and listens to keypresses.
+									If there is a keyboard key pressed, he will call the hotKeys function in the pagecontroller to handle the keypress.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The keydown event.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="leftclickhandler" class="tsd-anchor"></a>
+					<h3>left<wbr>Click<wbr>Handler</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">left<wbr>Click<wbr>Handler<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phasic/pirads/blob/66c671a/src/app/components/map/map.component.ts#L71">components/map/map.component.ts:71</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>when a sector on the sector map is left clicked, this function handles that event.</p>
+								</div>
+								<p>After the left click, we get the title of the clicked sector. We split the title up, and set region, level, side.
+									Then we set the selected entry in the pagecontroller to the clicked sector map. This is needed to adjust the score of the correct entry.
+								After this, we attempt to add this sector to the table, we call addtoTable().</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The click event.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="rightclickhandler" class="tsd-anchor"></a>
+					<h3>right<wbr>Click<wbr>Handler</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">right<wbr>Click<wbr>Handler<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phasic/pirads/blob/66c671a/src/app/components/map/map.component.ts#L93">components/map/map.component.ts:93</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>When a sector on the sector map is right clicked, this function handles that event.</p>
+								</div>
+								<p>After the right click, we get the title of the clicked sector. We split the title up, and set the region, level, side.
+									Then we set the selected entry in the pagecontroller to the clicked sector map. This is needed to adjust the score of the correct entry.
+								After this, we attempt to add a finding for this sector, we call addFinding().</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The contextmenu event.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="scrollhandler" class="tsd-anchor"></a>
+					<h3>scroll<wbr>Handler</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">scroll<wbr>Handler<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/phasic/pirads/blob/66c671a/src/app/components/map/map.component.ts#L116">components/map/map.component.ts:116</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>NOT USED ANYMORE: unwanted page scrolling when we have a large table. Adjusting score is now done with the keyboard.</p>
+								</div>
+								<p>When a sector is hovered over and we scroll with the scrollwheel, this function handles that event.</p>
+								<p>When we scroll, we can quickly adapt the score of a sector we&#39;re hovering over.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The mousewheel event.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_app_component_.html">"app.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_app_module_.html">"app.module"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_components_map_legend_component_.html">"components/map/legend.component"</a>
+					</li>
+					<li class="current tsd-kind-external-module">
+						<a href="../modules/_components_map_map_component_.html">"components/map/map.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_components_table_orderby_.html">"components/table/orderby"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_components_table_table_component_.html">"components/table/table.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_directives_autosize_directive_.html">"directives/autosize.directive"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_directives_imagemap_directive_.html">"directives/imagemap.directive"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_index_.html">"index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_services_data_service_.html">"services/data.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_services_hotkey_service_.html">"services/hotkey.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_services_page_controller_.html">"services/page.controller"</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-external-module">
+						<a href="_components_map_map_component_.mapcomponent.html" class="tsd-kind-icon">Map<wbr>Component</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="_components_map_map_component_.mapcomponent.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_components_map_map_component_.mapcomponent.html#dataservice" class="tsd-kind-icon">dataservice</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_components_map_map_component_.mapcomponent.html#level" class="tsd-kind-icon">level</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_components_map_map_component_.mapcomponent.html#pagectrl" class="tsd-kind-icon">pagectrl</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_components_map_map_component_.mapcomponent.html#region" class="tsd-kind-icon">region</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_components_map_map_component_.mapcomponent.html#side" class="tsd-kind-icon">side</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_components_map_map_component_.mapcomponent.html#translate" class="tsd-kind-icon">translate</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_components_map_map_component_.mapcomponent.html#addfinding" class="tsd-kind-icon">add<wbr>Finding</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_components_map_map_component_.mapcomponent.html#addtotable" class="tsd-kind-icon">addto<wbr>Table</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_components_map_map_component_.mapcomponent.html#keypresshandler" class="tsd-kind-icon">key<wbr>Press<wbr>Handler</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_components_map_map_component_.mapcomponent.html#leftclickhandler" class="tsd-kind-icon">left<wbr>Click<wbr>Handler</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_components_map_map_component_.mapcomponent.html#rightclickhandler" class="tsd-kind-icon">right<wbr>Click<wbr>Handler</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_components_map_map_component_.mapcomponent.html#scrollhandler" class="tsd-kind-icon">scroll<wbr>Handler</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

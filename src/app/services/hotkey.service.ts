@@ -1,14 +1,52 @@
 import {Injectable} from "@angular/core";
 import {Http, Response} from '@angular/http'
-
+/**
+ * The HotkeyService reads the hotkeys.json file, and parses it into an array that can be used in the code to assign keybindings to functionality.
+ *
+ * When you want to change hotkeys, change the file and reload the page.
+ *
+ * Structure of the hotkeys array:
+ *
+ *       private _hotkeys: {
+ *                  method: {
+ *                    one: number,
+ *                    two: number,
+ *                    three: number
+ *                  },
+ *                  finding: {
+ *                    one: number,
+ *                    two: number,
+ *                    three: number,
+ *                    four: number,
+ *                    five: number,
+ *                    six: number,
+ *                    seven: number,
+ *                    eight: number,
+ *                    nine: number
+ *                  },
+ *                  scoring: {
+ *                    plus: number,
+ *                    minus: number
+ *                  }
+ *     };
+ *
+ * The hotkeys array will contains the keycodes of the hotkeys.
+ *
+ * Rebinding + and - won't work at the moment, the keycodes are calculated differently. Possible solution: store the characters in the array, and handle the keycodes in the rest of the code.
+ */
 @Injectable()
 export class HotkeyService {
+  /**
+   * Getter that returns the hotkey array.
+   * @returns {{method: {one: number, two: number, three: number}, finding: {one: number, two: number, three: number, four: number, five: number, six: number, seven: number, eight: number, nine: number}, scoring: {plus: number, minus: number}}}
+   */
   get hotkeys(): {method: {one: number; two: number; three: number}; finding: {one: number; two: number; three: number; four: number; five: number; six: number; seven: number; eight: number; nine: number}; scoring: {plus: number; minus: number}} {
     return this._hotkeys;
   }
 
   /**
-   *
+   * http service gets the hotkeys.json file and maps it to a response. That response will get assigned to the hotkeys array.
+   * The hotkeys array contains the keycodes of the hotkeys.
    * @param http used to read the json file
    */
   constructor(private http: Http) {
