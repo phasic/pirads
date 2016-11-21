@@ -218,6 +218,9 @@ export class TableComponent{
     this.pagectrl.selectedentry = {region: region, level: level, side: side};
     //highlight the selection
     this.pagectrl.highlightEntry(region, level, side, true);
+    this.dataservice.setFindingsIndex(0);
+    this.dataservice.setMethod('T2');
+
   }
 
   /**
@@ -241,7 +244,6 @@ export class TableComponent{
       if(length >= 9){
         //catch the right click
         event.preventDefault();
-        event.stopPropagation();
         //and do nothing
         return;
       }
@@ -266,7 +268,6 @@ export class TableComponent{
     this.pagectrl.highlightEntry(region, level, side);
     //catch the right click
     event.preventDefault();
-    event.stopPropagation();
   }
 
   /**
@@ -300,8 +301,6 @@ export class TableComponent{
     this.dataservice.setMethod(method);
     //calculate the pirads again
     this.dataservice.calcPirads(region, idata);
-    //cathc the click before it passes to the parent element (the row)
-    event.stopPropagation();
   }
 
   /**

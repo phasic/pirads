@@ -98,6 +98,7 @@ var PageController = (function () {
             else if (keycode == 40) {
                 this.adjustFinding('down');
             }
+            event.preventDefault();
         }
         var _a, _b;
     };
@@ -177,7 +178,6 @@ var PageController = (function () {
             this.dataservice.calcPirads(region, i);
             //catch the scroll, OLD
             event.preventDefault();
-            event.stopPropagation();
         }
         //catch the scroll errors, when we scroll over a sector that's not in the data
         catch (e) {

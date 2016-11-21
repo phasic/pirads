@@ -13,5 +13,14 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['app.component.css']
 })
-export class AppComponent {}
+export class AppComponent {
+
+  /**
+   * This handler disables the right clicks on the page. So the user doesn't see the right click menu.
+   * @param event
+   */
+  keyPressHandler(event: any){
+    event.preventDefault();
+  }
+}
 

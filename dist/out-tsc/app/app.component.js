@@ -21,6 +21,13 @@ var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
     }
+    /**
+     * This handler disables the right clicks on the page. So the user doesn't see the right click menu.
+     * @param event
+     */
+    AppComponent.prototype.keyPressHandler = function (event) {
+        event.preventDefault();
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',

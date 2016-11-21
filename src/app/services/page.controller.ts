@@ -102,6 +102,8 @@ export class PageController {
       else if (keycode == 40) {
         this.adjustFinding('down');
       }
+
+      event.preventDefault();
     }
 
   }
@@ -185,7 +187,6 @@ export class PageController {
       this.dataservice.calcPirads(region,i);
       //catch the scroll, OLD
       event.preventDefault();
-      event.stopPropagation();
     }
       //catch the scroll errors, when we scroll over a sector that's not in the data
     catch(e){
@@ -266,5 +267,4 @@ export class PageController {
       element.childNodes[1].setAttribute('class', classname);
     });
   }
-
 }

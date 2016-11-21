@@ -294,7 +294,6 @@ var MapComponent = (function () {
             if (length_1 >= 9) {
                 //catch the right click
                 event.preventDefault();
-                event.stopPropagation();
                 //and do nothing
                 return;
             }
@@ -321,7 +320,6 @@ var MapComponent = (function () {
         this.pagectrl.highlightEntry(this.region, this.level, this.side);
         //catch the right click
         event.preventDefault();
-        event.stopPropagation();
     };
     MapComponent = __decorate([
         core_1.Component({

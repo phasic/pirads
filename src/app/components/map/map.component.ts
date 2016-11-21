@@ -308,7 +308,6 @@ export class MapComponent{
       if(length >= 9){
         //catch the right click
         event.preventDefault();
-        event.stopPropagation();
         //and do nothing
         return;
       }
@@ -338,7 +337,6 @@ export class MapComponent{
     this.pagectrl.highlightEntry(this.region, this.level, this.side);
 //catch the right click
     event.preventDefault();
-    event.stopPropagation();
   }
 }
 

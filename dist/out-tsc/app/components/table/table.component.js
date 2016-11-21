@@ -204,6 +204,8 @@ var TableComponent = (function () {
         this.pagectrl.selectedentry = { region: region, level: level, side: side };
         //highlight the selection
         this.pagectrl.highlightEntry(region, level, side, true);
+        this.dataservice.setFindingsIndex(0);
+        this.dataservice.setMethod('T2');
     };
     /**
      * When we right click a table row, we get the region, level and side of that row.
@@ -226,7 +228,6 @@ var TableComponent = (function () {
             if (length_1 >= 9) {
                 //catch the right click
                 event.preventDefault();
-                event.stopPropagation();
                 //and do nothing
                 return;
             }
@@ -249,7 +250,6 @@ var TableComponent = (function () {
         this.pagectrl.highlightEntry(region, level, side);
         //catch the right click
         event.preventDefault();
-        event.stopPropagation();
     };
     /**
      * Used to give a score to a method with the mouse.
@@ -282,8 +282,6 @@ var TableComponent = (function () {
         this.dataservice.setMethod(method);
         //calculate the pirads again
         this.dataservice.calcPirads(region, idata);
-        //cathc the click before it passes to the parent element (the row)
-        event.stopPropagation();
     };
     /**
      * We only want to be able to get a menu to adjust the score of a method on a row that is selected.

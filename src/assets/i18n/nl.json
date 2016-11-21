@@ -1,10 +1,10 @@
 {
   "LEGEND":{
-    "ONE": "zeer laag (klinisch significante kanker is hoogst onwaarschijnlijk",
-    "TWO": "laag (klinisch significante kanker is onwaarschijnlijk",
-    "THREE": "gemiddeld (de aanwezigheid van klinisch significante kanker is twijfelachtig",
-    "FOUR": "hoog (zoge waarschijnlijkheid op klinisch significante kanker",
-    "FIVE": "zeer hoog (zeer hoge waarschijnlijkheid op klinisch significante kanker",
+    "ONE": "zeer laag (klinisch significante kanker is hoogst onwaarschijnlijk)",
+    "TWO": "laag (klinisch significante kanker is onwaarschijnlijk)",
+    "THREE": "gemiddeld (de aanwezigheid van klinisch significante kanker is twijfelachtig)",
+    "FOUR": "hoog (hoge waarschijnlijkheid op klinisch significante kanker)",
+    "FIVE": "zeer hoog (zeer hoge waarschijnlijkheid op klinisch significante kanker)",
     "X": "technisch inadequaat of niet getest"
   },
   "TABLE":{
@@ -17,7 +17,7 @@
     "DWI": "DWI",
     "DCE": "DCE",
     "PIRADS": "PIRADS",
-    "DIALOG": "U staat op het punt om meer dan 4 bevindingen toe te voeg, wilt u doorgaan?",
+    "DIALOG": "U staat op het punt om meer dan 4 bevindingen toe te voegen, wilt u doorgaan?",
     "SORT BY": "Sorteren op"
   },
   "DATA":{
