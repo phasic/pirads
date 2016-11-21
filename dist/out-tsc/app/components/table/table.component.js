@@ -166,10 +166,15 @@ var TableComponent = (function () {
     };
     /**
      * If we click the cross sign on an entry, we remove it from the dataservice.
-     * @param index  The index of the entry in the DataService.
+     * @param region
+     * @param level
+     * @param side
      */
-    TableComponent.prototype.removeRow = function (index) {
-        this.dataservice.getData().splice(index, 1);
+    TableComponent.prototype.removeRow = function (region, level, side) {
+        var _a = this.dataservice.findEntry(region, level, side), foundentry = _a[0], i = _a[1];
+        if (foundentry) {
+            this.dataservice.getData().splice(i, 1);
+        }
     };
     /**
      * If we open the dropdown menu to sort the table, and we click an element of which we want to sort, this function gets called.

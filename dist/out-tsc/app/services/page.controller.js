@@ -94,10 +94,12 @@ var PageController = (function () {
             }
             else if (keycode == 38) {
                 this.adjustFinding('up');
+                //prevent the page of scrolling
                 event.preventDefault();
             }
             else if (keycode == 40) {
                 this.adjustFinding('down');
+                //prevent the page of scrolling
                 event.preventDefault();
             }
         }

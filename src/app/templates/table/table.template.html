@@ -39,7 +39,8 @@
             {{'TABLE.COMMENT' | translate}}
           </div>
           <div class="align-right" >
-            <span class="glyphicon glyphicon-remove" (click)="removeRow(ientry)"></span>
+            <!--<span class="glyphicon glyphicon-remove" (click)="removeRow(ientry)"></span>-->
+            <span class="glyphicon glyphicon-remove" (click)="removeRow(entry.region, entry.level, entry.side)"></span>
           </div>
         </div>
         <div class="panel-body">

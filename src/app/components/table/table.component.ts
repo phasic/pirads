@@ -177,10 +177,15 @@ export class TableComponent{
 
   /**
    * If we click the cross sign on an entry, we remove it from the dataservice.
-   * @param index  The index of the entry in the DataService.
+   * @param region
+   * @param level
+   * @param side
    */
-  removeRow(index){
-    this.dataservice.getData().splice(index, 1);
+  removeRow(region: string, level: string, side: string){
+    let [foundentry, i] = this.dataservice.findEntry(region, level, side);
+    if(foundentry){
+     this.dataservice.getData().splice(i,1);
+    }
   }
 
   /**
