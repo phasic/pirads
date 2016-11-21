@@ -33,7 +33,7 @@ export class MapComponent{
   /**
    * This array contains all the definitions of the areas of the sector map.
    *
-   * Evert area is defined by a title and it's corresponding coordinates.
+   * Evert area is defined by a title and its corresponding coordinates.
    * @type {{title: string; coords: string}[]}
    */
   private areas: Array<any> = [{

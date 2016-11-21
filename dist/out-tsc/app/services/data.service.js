@@ -110,7 +110,7 @@ var DataService = (function () {
      * @param region The region of the entry we want to find.
      * @param level The level of the entry we want to find.
      * @param side The side of the entry we want the find.
-     * @returns {any} Return a boolean (true: found an entry in the table, false: no such entry in the table). Number: the index number of the found entry. If there isn't a found entry, the index will be pointed at the last element.
+     * @returns {any} Returns a boolean (true: found an entry in the table, false: no such entry in the table). Number: the index number of the found entry. If there isn't a found entry, the index will be pointed at the last element.
      */
     DataService.prototype.findEntry = function (region, level, side) {
         var i;
@@ -129,12 +129,12 @@ var DataService = (function () {
         return [false, i];
     };
     /**
-     * Set the score of a certain entry.
+     * Set the score of a method of a certain entry.
      * @param region  Region of the entry.
      * @param level Level of the entry.
      * @param side Side of the entry.
      * @param index The findings index of the entry.
-     * @param method The method of which we want to give a score to.
+     * @param method The method of which we want to give a score to (T2, DWI, DCE).
      * @param score The score.
      */
     DataService.prototype.setScore = function (region, level, side, index, method, score) {
@@ -146,9 +146,11 @@ var DataService = (function () {
         this.calcPirads(region, i);
     };
     /**
-     * Calculate the pirads score for a certain finding. Based on a region and the entry index
+     * Calculate the PIRADS score for a certain finding. Based on a region and the entry index
      *
      * This calculation is done based on the PIRADS standard: https://www.acr.org/~/media/ACR/Documents/PDF/QualitySafety/Resources/PIRADS/PIRADS%20V2.pdf
+     *
+     * The resulting PIRADS score will be stored in the corresponding dataservice entry.
      * @param region  The region of the sector
      * @param index The entry index
      */

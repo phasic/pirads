@@ -16,7 +16,7 @@ var hotkey_service_1 = require("./hotkey.service");
  */
 var PageController = (function () {
     /**
-     *
+     * The constructor will initialize the dataservice and the hotkeyservice.
      * @param dataservice This service contains all the data. This is used to set and get the correct data we want.
      * @param hotkeyservice The hotkeyService contains an array with all the hotkeys.
      */
@@ -48,57 +48,61 @@ var PageController = (function () {
         configurable: true
     });
     /**
-     * When a key is pressed anywhere in the window, this function will get called. It takes the keycode of the pressed number
+     * When a key is pressed anywhere in the window, this function will get called. It takes the keycode of the pressed number,
+     * and checks if that key is defined by the hotkeyservice. If it is: do the corresponding action (navigating through scores, giving scores, changing methods)
      * @param keycode Keycode of the pressed key.
      */
     PageController.prototype.hotKeys = function (keycode) {
-        //get the hotkeys array
-        var hotkeys = this.hotkeyservice.hotkeys; //get the hotkeys from the hotkey service
-        //set the right findings index
-        this.findingsindex = parseInt((_a = {},
-            _a[hotkeys.finding.one] = '0',
-            _a[hotkeys.finding.two] = '1',
-            _a[hotkeys.finding.three] = '2',
-            _a[hotkeys.finding.four] = '3',
-            _a[hotkeys.finding.five] = '4',
-            _a[hotkeys.finding.six] = '5',
-            _a[hotkeys.finding.seven] = '6',
-            _a[hotkeys.finding.eight] = '7',
-            _a[hotkeys.finding.nine] = '8',
-            _a
-        )[keycode] || this.dataservice.getFindingsIndex().toString());
-        this.dataservice.setFindingsIndex(this.findingsindex);
-        //set the righ method
-        this.method = (_b = {},
-            _b[hotkeys.method.one] = 'T2',
-            _b[hotkeys.method.two] = 'DWI',
-            _b[hotkeys.method.three] = 'DCE',
-            _b
-        )[keycode] || this.dataservice.getMethod();
-        this.dataservice.setMethod(this.method);
-        //if we clicked +
-        if (keycode == (hotkeys.scoring.plus + 64)) {
-            this.adjustScore(-100);
-        }
-        else if (keycode == (hotkeys.scoring.minus + 64)) {
-            this.adjustScore(100);
-        }
-        else if (keycode == 37) {
-            this.adjustMethod('left');
-        }
-        else if (keycode == 39) {
-            this.adjustMethod('right');
-        }
-        else if (keycode == 38) {
-            this.adjustFinding('up');
-        }
-        else if (keycode == 40) {
-            this.adjustFinding('down');
+        //when we're typing a comment in the comment textfield, disable the hotkeys
+        if (!(document.activeElement.nodeName == 'TEXTAREA' || document.activeElement.nodeName == 'INPUT')) {
+            //get the hotkeys array
+            var hotkeys = this.hotkeyservice.hotkeys; //get the hotkeys from the hotkey service
+            //set the right findings index
+            this.findingsindex = parseInt((_a = {},
+                _a[hotkeys.finding.one] = '0',
+                _a[hotkeys.finding.two] = '1',
+                _a[hotkeys.finding.three] = '2',
+                _a[hotkeys.finding.four] = '3',
+                _a[hotkeys.finding.five] = '4',
+                _a[hotkeys.finding.six] = '5',
+                _a[hotkeys.finding.seven] = '6',
+                _a[hotkeys.finding.eight] = '7',
+                _a[hotkeys.finding.nine] = '8',
+                _a
+            )[keycode] || this.dataservice.getFindingsIndex().toString());
+            this.dataservice.setFindingsIndex(this.findingsindex);
+            //set the righ method
+            this.method = (_b = {},
+                _b[hotkeys.method.one] = 'T2',
+                _b[hotkeys.method.two] = 'DWI',
+                _b[hotkeys.method.three] = 'DCE',
+                _b
+            )[keycode] || this.dataservice.getMethod();
+            this.dataservice.setMethod(this.method);
+            //if we clicked +
+            if (keycode == (hotkeys.scoring.plus + 64)) {
+                this.adjustScore(-100);
+            }
+            else if (keycode == (hotkeys.scoring.minus + 64)) {
+                this.adjustScore(100);
+            }
+            else if (keycode == 37) {
+                this.adjustMethod('left');
+            }
+            else if (keycode == 39) {
+                this.adjustMethod('right');
+            }
+            else if (keycode == 38) {
+                this.adjustFinding('up');
+            }
+            else if (keycode == 40) {
+                this.adjustFinding('down');
+            }
         }
         var _a, _b;
     };
     /**
-     * When we navigate with the arrow keys.
+     * When we navigate with the arrow keys we want to navigate through the the findings of one entry, or change the selected method.
      *
      * Left or right: navigate through methods.
      *
@@ -137,7 +141,7 @@ var PageController = (function () {
     };
     /**
      * This function gets called when we want to change the score of the selected method.
-     * The delta indicated increment or decrement the score.
+     * The delta indicates an increment or a decrement of the score.
      *
      * Delta < 0 : score ++
      *

@@ -30,7 +30,7 @@ import {Http, Response} from '@angular/http'
  *                  }
  *     };
  *
- * The hotkeys array will contains the keycodes of the hotkeys.
+ * The hotkeys array contains the keycodes of the hotkeys.
  *
  * Rebinding + and - won't work at the moment, the keycodes are calculated differently. Possible solution: store the characters in the array, and handle the keycodes in the rest of the code.
  */

@@ -32,7 +32,7 @@ var Autosize = (function () {
         this.adjust();
     };
     /**
-     * When this directive is initialized ( when a textarea is created, call this.adjust().
+     * When this directive is initialized (when a textarea is created, call this.adjust()).
      */
     Autosize.prototype.ngOnInit = function () {
         this.adjust();

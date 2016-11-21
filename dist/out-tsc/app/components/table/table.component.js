@@ -16,21 +16,21 @@ var page_controller_1 = require("../../services/page.controller");
  * This component contains the table of the PIRADS entries in the data.
  * The table shows every sector entry with their findings and corresponding scores.
  *
- * when you click a sector entry in the table, that row will get highlighted, so you can adjust the score.
+ * When you click a sector entry in the table, that row will get highlighted, so you can adjust the score and navigate through the findings.
  *
  * Right click on a row will add another finding to that entry.
  *
  *
- * By default: use + and - to increment and decrement the score, the arrow key will navigatie through the findings of that entry,
+ * By default: use + and - to increment and decrement the score, the arrow key will navigate through the findings of that entry,
  * and adjust the selected method.
  *
  *
- * Instead of using keyboard keys, you can hover over a score of the selected entry, and adjust it like that.
+ * Instead of using keyboard keys, you can hover over a score of the selected entry, and adjust it via a selection menu.
  *
  * There is an option to remove findings of an entry.
  *
  *
- * In the left upper corner of the table you can select how you want to sort the table (by region, level or side)
+ * In the left upper corner of the table you can select how you want to sort the table (by region, level or side).
  *
  *        selector: 'table-component'
  *
@@ -106,7 +106,7 @@ var TableComponent = (function () {
      * This is used to add some visual feedback on the selected finding and method.
      *
      * Originally colors were used depending on the score (white --> red),
-     * these are disabled because were using the dark theme
+     * these are disabled because were using the dark theme.
      * @param value The score value, originally used to give a color back depending on the score. This isn't used anymore, but still there if custom colors are needed for a light theme.
      * @param method  The method (T2, DWI, DCE) of the element, used to compare it to the selected method of the DataService.
      * @param ifinding The findings index of the element, used to compare it to the selected findings index of the DataService.
@@ -253,10 +253,10 @@ var TableComponent = (function () {
     };
     /**
      * Used to give a score to a method with the mouse.
-     * When you hover over a method, a menu show up with the different possible scores for that method. When you click one of them,
+     * When you hover over a method, a menu shows up with the different possible scores for that method. When you click one of them,
      * this function gets called.
      *
-     * setScore gets the method of which the score is given, the score itself and the findings index.
+     * setScore gets the method of which the score is given (T2, DWI, DCE), the score itself and the findings index.
      *
      * Get the region, level and side of the selected entry.
      *
@@ -264,7 +264,7 @@ var TableComponent = (function () {
      *
      * Set a highlight on that element.
      *
-     * Then we calculate the PIRADS score again.
+     * Then we calculate the PIRADS score again to get immediate feedback.
      * @param method  The method of which the score is given
      * @param score The selected score
      * @param ifinding  The findings index
@@ -287,7 +287,7 @@ var TableComponent = (function () {
     };
     /**
      * We only want to be able to get a menu to adjust the score of a method on a row that is selected.
-     * So we need to disable those menus in the non-selected row.
+     * So we need to disable those menus in the non-selected rows.
      * We do this by checking the region, level, side of a badge corresponding with a method,
      * and check if that badge is an element of the selected row, if not: disable the menu behind the badge
      * @param region  The region of the row where the badge is in

@@ -17,7 +17,7 @@ var core_1 = require('@angular/core');
  */
 var RwdImageMap = (function () {
     /**
-     * The constructor will define the element, the image map, when initialized.
+     * The constructor will define the element, the image, when initialized.
      *
      * After 100ms we will get the natural, unscaled, width of the image
      * @param elementRef
@@ -55,7 +55,7 @@ var RwdImageMap = (function () {
      * Then assign those coordinates again to the corresponding area.
      *
      * At the end set the imgwidth en imgheight to the current width and height. (calculating the scale happens iteratively every time we rescale the page,
-     * it's not calculated from the native size, but from the current size en previous size)
+     * it's not calculated from the native size, but from the current size and previous size)
      */
     RwdImageMap.prototype.rescale = function () {
         //get the current width
