@@ -304,10 +304,13 @@ export class TableComponent{
     let idata: number = this.dataservice.findEntry(region,level,side)[1];
     //set the findings index on the passed ifinding
     this.dataservice.setFindingsIndex(ifinding);
+    this.dataservice.setMethod(method);
     //set the method on the passed method, a highlight will be generated
     this.dataservice.setMethod(method);
     //calculate the pirads again
     this.dataservice.calcPirads(region, idata);
+    //stop the propagation so the leftclickhandler doesn't get called on the table, so the method isn't set to T2 and the index to 0. We don't want that.
+    event.stopPropagation();
   }
 
   /**
