@@ -28,3 +28,15 @@
 .hidden-clickborder {
   outline: none;
 }
+.legend-component {
+  position: absolute;
+  z-index: 3;
+}
+div {
+  -webkit-user-select: none;
+  cursor: default;
+}
+a:hover {
+  cursor: pointer;
+}
+

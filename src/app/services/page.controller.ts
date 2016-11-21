@@ -97,13 +97,14 @@ export class PageController {
       //up arrow key
       else if (keycode == 38) {
         this.adjustFinding('up');
+        event.preventDefault();
       }
       //down arrow key
       else if (keycode == 40) {
         this.adjustFinding('down');
+        event.preventDefault();
       }
 
-      event.preventDefault();
     }
 
   }

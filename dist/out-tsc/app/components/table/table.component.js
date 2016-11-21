@@ -216,6 +216,8 @@ var TableComponent = (function () {
      * @param side Side of the clicked row in the table.
      */
     TableComponent.prototype.tableRightClickHandler = function (region, level, side) {
+        //set the selected entry to the clicked row
+        this.pagectrl.selectedentry = { region: region, level: level, side: side };
         //this is the string you'll see when you try to add more than 4 findings to the table
         var confirmstring = this.translate.get("TABLE.DIALOG");
         //check if an entry already exists with this region, level and side

@@ -94,11 +94,12 @@ var PageController = (function () {
             }
             else if (keycode == 38) {
                 this.adjustFinding('up');
+                event.preventDefault();
             }
             else if (keycode == 40) {
                 this.adjustFinding('down');
+                event.preventDefault();
             }
-            event.preventDefault();
         }
         var _a, _b;
     };

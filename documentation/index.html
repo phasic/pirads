@@ -66,6 +66,10 @@
 			<div class="tsd-panel tsd-typography">
 				<h1 id="pirads">Pirads</h1>
 				<p>This is the Pirads report project, made with Angular2</p>
+				<p>The report is used to give a structured overview of the findings on the prostate.</p>
+				<p>3 measurements are taken per finding (T2, DWI, DCE). These three measurements have each a score (T2,DWI: 1-5. DCE: + or -).
+				Based on these scores we calculate a PIRADS score per finding, this score represents the chance on cancer. The score runs from 1 to 5.</p>
+				<p>The measurements need to be filled in by the radiologist, the code behind the report will calculate the PIRADS score. There is also room to give a volume and extra commentary.</p>
 				<p>For setting up a dev environment refer to <a href="http://wikihealthcare.agfa.net/display/clinapps/Setting+up+Angular+2+project+with+Angular-cli">Healthcare wiki</a>.</p>
 				<p>This project was generated with <a href="https://github.com/angular/angular-cli">angular-cli</a> version 1.0.0-beta.15.</p>
 				<h2 id="usage">Usage</h2>
@@ -77,9 +81,7 @@
 				<p><strong>Hotkeys</strong></p>
 				<p>Left | Right: Change the selected method</p>
 				<p>Up   | Down: Change the selected finding in an entry</p>
-				<ul>
-					<li>| - : Adjust the score of the selected method</li>
-				</ul>
+				<p>+ | - : Adjust the score of the selected method</p>
 				<p>Q | W | E : Select a method</p>
 				<p>1 | 2 | 3 | ... : Select a finding</p>
 				<h2 id="development-server">Development server</h2>

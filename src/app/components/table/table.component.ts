@@ -232,6 +232,8 @@ export class TableComponent{
    * @param side Side of the clicked row in the table.
    */
   tableRightClickHandler(region: string, level: string, side: string){
+    //set the selected entry to the clicked row
+    this.pagectrl.selectedentry = {region: region, level: level, side: side};
     //this is the string you'll see when you try to add more than 4 findings to the table
     let confirmstring: any = this.translate.get("TABLE.DIALOG");
     //check if an entry already exists with this region, level and side

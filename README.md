@@ -2,6 +2,13 @@
 
 This is the Pirads report project, made with Angular2
 
+The report is used to give a structured overview of the findings on the prostate.
+
+3 measurements are taken per finding (T2, DWI, DCE). These three measurements have each a score (T2,DWI: 1-5. DCE: + or -).
+Based on these scores we calculate a PIRADS score per finding, this score represents the chance on cancer. The score runs from 1 to 5.
+
+The measurements need to be filled in by the radiologist, the code behind the report will calculate the PIRADS score. There is also room to give a volume and extra commentary.
+
 For setting up a dev environment refer to [Healthcare wiki](http://wikihealthcare.agfa.net/display/clinapps/Setting+up+Angular+2+project+with+Angular-cli).
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.15.
@@ -23,7 +30,7 @@ Left | Right: Change the selected method
 
 Up   | Down: Change the selected finding in an entry
 
-+ | - : Adjust the score of the selected method
+\+ | - : Adjust the score of the selected method
 
 Q | W | E : Select a method
 

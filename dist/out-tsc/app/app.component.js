@@ -23,6 +23,8 @@ var AppComponent = (function () {
     }
     /**
      * This handler disables the right clicks on the page. So the user doesn't see the right click menu.
+     *
+     * It prevents the default action of the right mouse click.
      * @param event
      */
     AppComponent.prototype.keyPressHandler = function (event) {

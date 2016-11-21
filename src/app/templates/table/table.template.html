@@ -1,14 +1,14 @@
 <div class="table-container wrapper">
   <div class="row" *ngIf="data != ''">
     <div class="col-sm-6">
-      <a href="#" class="dropdown" dropdown>
+      <a class="dropdown" dropdown>
         <div class="dropdown-toggle" dropdownToggle>{{sorttitle.value}}
           <span *ngIf="zones.includes(sort.column) && sort.descending" class="glyphicon glyphicon-triangle-bottom"></span>
           <span *ngIf="zones.includes(sort.column) && !sort.descending" class="glyphicon glyphicon-triangle-top"></span>
         </div>
         <ul class="dropdown-menu">
           <li *ngFor="let column of zones">
-            <a href="#" (click)="clickSort(column)">
+            <a (click)="clickSort(column)">
               {{'TABLE.' + column.toLocaleUpperCase() | translate}}
               <div *ngIf="column == sort.column && sort.descending" class="glyphicon glyphicon-triangle-bottom"></div>
               <div *ngIf="column == sort.column && !sort.descending" class="glyphicon glyphicon-triangle-top"></div>
@@ -50,12 +50,12 @@
               </div>
               <div *ngFor="let method of columns.slice(0,3)" class="col-md-1 align-center">
                 <div *ngIf="checkIfSelectedEntry(entry.region, entry.level, entry.side)">
-                  <a href="#" class="dropdown badge" [ngStyle]="badgeStyle(finding[method], method, ifinding)" dropdown>
+                  <a class="dropdown badge" [ngStyle]="badgeStyle(finding[method], method, ifinding)" dropdown>
                     <div class="dropdown-toggle" dropdownToggle>{{finding[method]}}
                     </div>
                     <ul class="dropdown-menu dropdown-center list-inline">
                       <li *ngFor="let score of scorearray[method]">
-                        <a href="#" (click)="setScore(method, score, ifinding)">
+                        <a (click)="setScore(method, score, ifinding)">
                           {{score}}
                         </a>
                       </li>
