@@ -1,5 +1,5 @@
 <div (window:keydown)="keyPressHandler($event)"></div>
-<img class="map img-responsive" id="MapImg" rwdimagemap src="assets/pirads_sectormap.png" usemap="#Map"/>
+<img class="map img-responsive" id="MapImg" rwdimagemap src="assets/prostate_darkroom.png" usemap="#Map"/>
 <map name="Map" id="Map">
   <area *ngFor="let area of areas" class="hidden-clickborder" (click)="leftClickHandler($event)" (contextmenu)="rightClickHandler($event)" title="{{area.title}}" shape="poly" coords="{{area.coords}}"/>
 </map>
