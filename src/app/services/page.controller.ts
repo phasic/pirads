@@ -260,11 +260,11 @@ export class PageController {
         if( (child = sibling.childNodes[1]) && sibling != element) {
           //replace the style with a default one
           classname = child.className.replace("panel-primary", "panel-info");
-          //attach the attribute to the chil
+          //attach the attribute to the child
           child.setAttribute('class', classname);
         }
       }
-      //replace the style with the highlighto ne
+      //replace the style with the highlight one
       classname = element.childNodes[1].className.replace("panel-info", "panel-primary");
       //attach it to the selected row
       element.childNodes[1].setAttribute('class', classname);

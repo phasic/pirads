@@ -32,6 +32,7 @@
   position: absolute;
   z-index: 3;
   margin-top: 10px;
+}
 
 div {
   -webkit-user-select: none;
